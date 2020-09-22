@@ -7,8 +7,11 @@ public class myApp {
     public static void main(String[] args) { 
     	Product product = new Product("Edam", 3.3, 120);
     	System.out.println("Product value is " + product.countValue());
+        product.changeAmount(245);
+        product.changePrice(4.1);
     	product.printProduct();
-		product.changeAmount(245);
+		
+                
      }
 }
 
@@ -28,10 +31,11 @@ public class myApp {
         
 	public int changeAmount(int newvalue) {
 		amount = newvalue;
+                System.out.println(amount);
                 return amount;
 	}
 	
-	public int changePrice(int newprice) {
+	public double changePrice(double newprice) {
 		price = newprice;
 		return price;
 	}
@@ -40,3 +44,4 @@ public class myApp {
 		System.out.printf("Product %s, price %4.1f and balance %d pcs", name,price,amount);
 	}
 }
+
