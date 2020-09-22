@@ -1,8 +1,14 @@
-public class main {
+
+/**
+ *
+ * @author Joel
+ */
+public class myApp {
     public static void main(String[] args) { 
     	Product product = new Product("Edam", 3.3, 120);
     	System.out.println("Product value is " + product.countValue());
     	product.printProduct();
+	product.changeAmount(245);
      }
 }
 
@@ -15,8 +21,14 @@ public class main {
 		this.price = price;
 		this.amount = amount;
 	}
+	
 	public double countValue() {
 		return(amount * price);
+	}
+        
+	public int changeAmount(int newvalue) {
+		amount = newvalue;
+                return amount;
 	}
  
 	public void printProduct() {
